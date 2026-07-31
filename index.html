@@ -1,133 +1,307 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bashmath Academy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+<title>Bashmath Academy</title>
 
-        body{
-            background:#f5f7fb;
-        }
+<style>
 
-        nav{
-            background:#0A2E73;
-            color:white;
-            padding:15px 8%;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
 
-        .logo{
-            font-size:28px;
-            font-weight:bold;
-        }
+body{
+background:#f5f7fb;
+}
 
-        .hero{
-            min-height:90vh;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-            padding:50px 8%;
-            gap:40px;
-        }
+nav{
+background:#0A2E73;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+position:sticky;
+top:0;
+}
 
-        .hero-text{
-            flex:1;
-        }
+.logo{
+display:flex;
+align-items:center;
+color:white;
+font-size:26px;
+font-weight:bold;
+}
 
-        .hero-text h1{
-            font-size:55px;
-            color:#0A2E73;
-            margin-bottom:20px;
-        }
+.logo img{
+height:55px;
+margin-right:10px;
+}
 
-        .hero-text p{
-            font-size:20px;
-            line-height:1.8;
-            margin-bottom:25px;
-        }
+nav ul{
+display:flex;
+list-style:none;
+}
 
-        .btn{
-            display:inline-block;
-            padding:15px 30px;
-            background:#D72638;
-            color:white;
-            text-decoration:none;
-            border-radius:8px;
-        }
+nav ul li{
+margin-left:25px;
+}
 
-        .hero-image{
-            flex:1;
-            text-align:center;
-        }
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-        .hero-image img{
-            width:350px;
-            border-radius:20px;
-        }
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:70px 8%;
+min-height:90vh;
+background:white;
+}
 
-        footer{
-            background:#0A2E73;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
+.hero-text{
+flex:1;
+}
 
-        @media(max-width:768px){
-            .hero{
-                flex-direction:column;
-                text-align:center;
-            }
+.hero-text h1{
+font-size:55px;
+color:#0A2E73;
+margin-bottom:20px;
+}
 
-            .hero-text h1{
-                font-size:38px;
-            }
+.hero-text p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:30px;
+}
 
-            .hero-image img{
-                width:280px;
-            }
-        }
-    </style>
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#D72638;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-size:18px;
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:380px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.about{
+padding:70px 8%;
+text-align:center;
+background:#eef3ff;
+}
+
+.about h2{
+color:#0A2E73;
+font-size:40px;
+margin-bottom:20px;
+}
+
+.about p{
+font-size:20px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+}
+
+.courses{
+padding:70px 8%;
+}
+
+.courses h2{
+text-align:center;
+color:#0A2E73;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+font-size:22px;
+font-weight:bold;
+}
+
+footer{
+background:#0A2E73;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:38px;
+}
+
+.hero-image img{
+width:280px;
+margin-top:40px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <nav>
-    <div class="logo">BASHMATH ACADEMY</div>
+
+<div class="logo">
+<img src="logo.png">
+BASHMATH ACADEMY
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Courses</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
 </nav>
 
 <section class="hero">
 
-    <div class="hero-text">
-        <h1>Guiding Today • Empowering Tomorrow</h1>
+<div class="hero-text">
 
-        <p>
-            Welcome to Bashmath Academy. We prepare students for
-            WAEC, NECO, JAMB, Post-UTME and A-Level examinations
-            through quality teaching, mentorship and innovative learning.
-        </p>
+<h1>Guiding Today • Empowering Tomorrow</h1>
 
-        <a href="#" class="btn">Enroll Now</a>
-    </div>
+<p>
 
-    <div class="hero-image">
-        <img src="file_0000000551871f4a04878ceda80342c.png" alt="Bashmath Academy Logo">
-    </div>
+Welcome to Bashmath Academy.
+
+We prepare students for WAEC, NECO, JAMB, Post-UTME, A-Level and other academic examinations through quality teaching, mentorship and innovation.
+
+</p>
+
+<a href="#" class="btn">Enroll Now</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="ceo.jpg">
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>About Bashmath Academy</h2>
+
+<p>
+
+Bashmath Academy is a modern educational platform dedicated to helping students excel academically through excellent teaching, CBT practice, mentorship and innovative learning methods.
+
+</p>
+
+</section>
+
+<section class="courses">
+
+<h2>Our Courses</h2>
+
+<div class="grid">
+
+<div class="card">Mathematics</div>
+
+<div class="card">English</div>
+
+<div class="card">Physics</div>
+
+<div class="card">Chemistry</div>
+
+<div class="card">Biology</div>
+
+<div class="card">Economics</div>
+
+<div class="card">Accounting</div>
+
+<div class="card">Literature</div>
+
+</div>
 
 </section>
 
 <footer>
-    © 2026 Bashmath Academy. All Rights Reserved.
+
+<h2>Bashmath Academy</h2>
+
+<p>
+
+Phone: 09121293119
+
+</p>
+
+<p>
+
+Email: bashmathtutorials@gmail.com
+
+</p>
+
+<p>
+
+© 2026 Bashmath Academy. All Rights Reserved.
+
+</p>
+
 </footer>
 
 </body>
-          </html>
+
+</html>
